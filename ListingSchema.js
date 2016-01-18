@@ -1,6 +1,7 @@
 /* Import mongoose and define any variables needed to create the schema */
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+
+var Schema = mongoose.Schema;
 
 /* Create your schema */
 var listingSchema = new Schema({
@@ -25,8 +26,15 @@ listingSchema.pre('save', function(next) {
   if(!this.created_at)
     this.created_at = now;
 
+  if(!this.code)
+    return next(new Error('Must provide a code.'));
+
+  if(!this.name)
+    return next(new Error('must provide a name.'));
+
   next();
 });
+
 
 /* Use your schema to instantiate a Mongoose model */
 var Listing = mongoose.model('Listing', listingSchema);
