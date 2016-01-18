@@ -4,7 +4,7 @@
 
 module.exports = {
   db: {
-    uri: 'https://mongolab.com/databases/listings_cen3031_3c', //place the URI of your mongo database here.
+    uri: // 'https://mongolab.com/databases/listings_cen3031_3c', //place the URI of your mongo database here.
   }
 };
 

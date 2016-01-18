@@ -6,11 +6,11 @@
 var fs = require('fs'),
     mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    Listing = require('./ListingSchema.js'),
-    config = require('./config.example.js');
+    Listing = require('./ListingSchema'),
+    config = require('./config');
 
 /* Connect to your database */
-mongoose.connect('https://mongolab.com/databases/listings_cen3031_3c');
+mongoose.connect(config.db.uri);
 
 /*
   Instantiate a mongoose model for each listing object in the JSON file,

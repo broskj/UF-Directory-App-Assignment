@@ -7,8 +7,7 @@ var listingSchema = new Schema({
   /* your code here */
   code: String,
   name: String,
-//  coordinates: String,
-  meta: {
+  coordinates: {
       latitude: Number,
       longitude: Number
   },
