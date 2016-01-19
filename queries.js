@@ -17,7 +17,7 @@ var findLibraryWest = function() {
    Listing.find({ name: 'Library West' }, function(err, listing) {
       if(err) throw err;
 
-      //console.log(listing);
+      console.log(listing);
    });
 };
 var removeCable = function() {
